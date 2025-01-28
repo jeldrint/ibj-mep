@@ -12,9 +12,10 @@ const Header = () : React.ReactElement => {
    return(
       <div className="flex flex-col">
          {/* Top Header */}
-         <div className="bg-indigo-800 text-slate-300 flex items-center justify-center md:justify-between text-sm md:text-base py-3 px-4 md:px-6 lg:px-10">
-            <span className="">Welcome to Ibrahim Bin Jibreen Cont. Co.</span>
-            <span className="hidden md:block">0566601295</span>
+         <div className="bg-indigo-800 text-slate-300 flex items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-3 px-4 md:px-6 lg:px-10">
+            <span className="text-center block sm:hidden">Welcome to Ibrahim Bin Jibreen Contracting Co.</span>
+            <span className="hidden sm:block">Welcome to Ibrahim Bin Jibreen Cont. Co.</span>
+            <span className="hidden sm:block">0566601295</span>
          </div>
 
          <div className="flex items-center justify-around py-3 px-4 md:px-6 lg:px-10">
