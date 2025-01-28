@@ -5,10 +5,10 @@ import HomePage from "./components/HomePage";
 const App = () => {
   return (
     <div className="min-h-screen font-poppins">
-      <div className="flex flex-col h-screen w-full">
+      <div className="h-screen w-full flex flex-col">
         <Header />
         <HomePage />
-]      </div>
+      </div>
     </div>
   )
 }
