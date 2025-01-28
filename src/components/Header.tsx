@@ -1,4 +1,5 @@
 import { useState } from "react";
+import icon1 from '../images/icon1.png'
 
 
 const Header = () : React.ReactElement => {
@@ -12,10 +13,13 @@ const Header = () : React.ReactElement => {
    return(
       <div className="flex flex-col">
          {/* Top Header */}
-         <div className="bg-indigo-800 text-slate-300 flex items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-3 px-4 md:px-6 lg:px-10">
+         <div className="bg-indigo-800 text-slate-300 flex items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-1 px-4 md:px-6 lg:px-10">
             <span className="text-center block sm:hidden">Welcome to Ibrahim Bin Jibreen Contracting Co.</span>
             <span className="hidden sm:block">Welcome to Ibrahim Bin Jibreen Cont. Co.</span>
-            <span className="hidden sm:block">0566601295</span>
+            <span className="hidden sm:flex duration-200 p-2 rounded-lg hover:invert hover:bg-black gap-x-1 cursor-pointer">
+               <img alt='whatsapp logo' src={icon1} width={'25px'} className="inline-block invert"/>
+               +966 566 601 295
+            </span>
          </div>
 
          <div className="flex items-center justify-around py-3 px-4 md:px-6 lg:px-10">
@@ -31,7 +35,7 @@ const Header = () : React.ReactElement => {
                <li className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">ABOUT US</li>
                <li className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">OUR SERVICES</li>
                <li className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">OUR PROJECTS</li>
-               <li className="rounded-sm cursor-pointer border-2 p-2 duration-200 hover:border-indigo-700 hover:bg-slate-200 hover:opacity-80">CONTACT US</li>
+               <li className="rounded-md cursor-pointer border-2 p-2 duration-200 hover:border-indigo-700 hover:bg-slate-200 hover:opacity-80">CONTACT US</li>
             </ul>
 
             {/* Menu for small screens */}
