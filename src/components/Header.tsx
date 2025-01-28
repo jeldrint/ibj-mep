@@ -1,5 +1,6 @@
 import { useState } from "react";
 import icon1 from '../images/icon1.png'
+import { Link } from "react-router-dom";
 
 
 const Header = () : React.ReactElement => {
@@ -24,18 +25,18 @@ const Header = () : React.ReactElement => {
 
          <div className="flex items-center justify-around py-3 px-4 md:px-6 lg:px-10">
             {/* IBJ Logo */}
-            <div className="flex flex-col cursor-pointer font-serif text-center text-indigo-800">
+            <Link to='/' className="flex flex-col cursor-pointer font-serif text-center text-indigo-800">
                <span className="text-4xl md:text-[41px] lg:text-7xl min-w-24 cursor-pointer">I B J</span>
                <span className="lg:text-[20px]">شركة إبراهيم بن جبرين للمقاولات</span>
-            </div>
+            </Link>
 
             {/* Menu for large screens */}
-            <ul className="hidden sm:flex items-center list-none tracking-wide gap-x-2 md:gap-x-4 lg:gap-x-6 text-sm md:text-base lg:text-lg text-center">
-               <li className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">HOME</li>
-               <li className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">ABOUT US</li>
-               <li className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">OUR SERVICES</li>
-               <li className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">OUR PROJECTS</li>
-               <li className="rounded-md cursor-pointer border-2 p-2 duration-200 hover:border-indigo-700 hover:bg-slate-200 hover:opacity-80">CONTACT US</li>
+            <ul className="hidden sm:flex items-center list-none tracking-wide gap-x-2 lg:gap-x-6 text-sm md:text-base lg:text-lg text-center text-nowrap">
+               <li><Link to='/' className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">HOME</Link></li>
+               <li><Link to='/about-us' className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">ABOUT US</Link></li>
+               <li><Link to='/services' className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">OUR SERVICES</Link></li>
+               <li><Link to='/projects' className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">OUR PROJECTS</Link></li>
+               <li><Link to='/contact-us' className="rounded-md cursor-pointer border-2 p-2 duration-200 hover:border-indigo-700 hover:bg-slate-200 hover:opacity-80">CONTACT US</Link></li>
             </ul>
 
             {/* Menu for small screens */}
