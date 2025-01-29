@@ -31,7 +31,7 @@ const Header = () : React.ReactElement => {
             </Link>
 
             {/* Menu for large screens */}
-            <ul className="hidden sm:flex items-center list-none tracking-wide gap-x-2 lg:gap-x-6 text-sm md:text-base lg:text-lg text-center text-nowrap">
+            <ul className="hidden sm:flex items-center list-none tracking-wide md:gap-x-3 lg:gap-x-6 text-[10px] sm:text-[12px] md:text-[15px] lg:text-[17px] text-center text-nowrap">
                <li><Link to='/' className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">HOME</Link></li>
                <li><Link to='/about-us' className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">ABOUT US</Link></li>
                <li><Link to='/services' className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">OUR SERVICES</Link></li>
