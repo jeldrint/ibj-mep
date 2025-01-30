@@ -1,3 +1,5 @@
+import { transform } from 'typescript';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -16,30 +18,29 @@ export default {
         poppins: 'Poppins',
         lato: 'Lato',
       },
+      animation: {
+         "fade-in-left": "fadeInLeft 1.5s ease-in-out 1",
+         "fade-in-right": "fadeInRight 1.5s ease-in-out infinite",
+         "fade-in-up": "fadeInUp 1.5s ease-in-out 1",
+         "fade-in-down": "fadeInDown 1.5s ease-in-out infinite"
+      },
       keyframes: {
-         refine: {
-            "0%": {
-             left: "0%", 
-            },
-            "20%": {
-             left: "-50%", 
-            },
-            "40%": {
-             left: "0%", 
-            },
-            "60%": {
-             left: "50%", 
-            },
-            "80%": {
-             left: "0%", 
-            },
-            "100%": {
-             left: "0%", 
-            }
+         fadeInLeft: {
+            "0%": { opacity: '0', transform: 'translateX(30%)' },
+            "100%": { opacity: '1', transform: 'translateX(0%)' },
          },
-         animation: {
-            "refine-slide": "refine 2s infinite"
-         }
+         fadeInRight: {
+            "0%": { opacity: '0', transform: 'translateX(90%)' },
+            "100%": { opacity: '1', transform: 'translateX(0%)' },
+         },
+         fadeInUp: {
+            "0%": { opacity: '0', transform: 'translateY(30%)' },
+            "100%": { opacity: '1', transform: 'translateY(0%)' },
+         },
+         fadeInDown: {
+            "0%": { opacity: '0', transform: 'translateX(70%)' },
+            "100%": { opacity: '1', transform: 'translateX(30%)' },
+         },
       }
    },
   },

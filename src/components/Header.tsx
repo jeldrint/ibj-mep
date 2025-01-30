@@ -12,14 +12,14 @@ const Header = () : React.ReactElement => {
    const barStyle3 = 'w-5 h-[3px] bg-black mt-[6px] transition-transform -rotate-[135deg] -translate-y-[5px]';
 
    return(
-      <div className="flex flex-col">
+      <div className="mb-5 flex flex-col">
          {/* Top Header */}
          <div className="bg-indigo-800 text-slate-300 flex items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-1 px-4 md:px-6 lg:px-10">
             <span className="text-center block sm:hidden">Welcome to Ibrahim Bin Jibreen Contracting Co.</span>
             <span className="hidden sm:block">Welcome to Ibrahim Bin Jibreen Cont. Co.</span>
-            <span className="hidden sm:flex duration-200 p-2 rounded-lg hover:invert hover:bg-black gap-x-1 cursor-pointer">
-               <img alt='whatsapp logo' src={icon1} width={'25px'} className="inline-block invert"/>
-               +966 566 601 295
+            <span className="hidden sm:flex duration-200 p-2 rounded-lg hover:bg-black gap-x-1 cursor-pointer">
+               <img alt='whatsapp logo' src={icon1} width={'25px'} className="invert"/>
+               <span>+966 566 601 295</span>
             </span>
          </div>
 
