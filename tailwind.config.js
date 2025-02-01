@@ -21,8 +21,8 @@ export default {
       animation: {
          "fade-in-left": "fadeInLeft 1.5s ease-in-out 1",
          "fade-in-right": "fadeInRight 1.5s ease-in-out infinite",
-         "fade-in-up": "fadeInUp 1.5s ease-in-out 1",
-         "fade-in-down": "fadeInDown 1.5s ease-in-out infinite"
+         "fade-in-top": "fadeInUp 1.5s ease-in-out 1",
+         "fade-in-bottom": "fadeInDown 1.5s ease-in-out infinite"
       },
       keyframes: {
          fadeInLeft: {

@@ -6,7 +6,7 @@ const About = () : React.ReactElement => {
   return(
    <div className="w-full h-full">
       {/* ABOUT Header  */}
-      <section className='animate-fade-in-up relative h-[50vh] bg-cover bg-top lg:bg-[0%_20%] xl:bg-center w-full clip-center-1 bg-blue-800 bg-blend-hard-light' style={{backgroundImage: `url(${pic2})`}}>
+      <section className='relative h-[50vh] bg-cover bg-top lg:bg-[0%_20%] xl:bg-center w-full clip-center-1 bg-blue-800 bg-blend-hard-light' style={{backgroundImage: `url(${pic2})`}}>
          <div className='absolute p-9 backdrop-blur-sm h-full w-full flex flex-col gap-y-2 items-center justify-center'>
             <span className='text-4xl sm:text-6xl text-indigo-800 bg-slate-100 p-2 rounded-md'>ABOUT IBJ</span>
             <span className='text-base lg:text-lg text-black text-center max-w-[900px] bg-slate-100 p-1 rounded-md'>Our main goal is to exceed the client’s satisfaction by giving them the final accepted project at a 
@@ -47,7 +47,7 @@ const About = () : React.ReactElement => {
             to Construction and Engineering.
          </div>
          <br /><br />
-         <div className='active:animate-fade-in-left text-base lg:text-lg'>
+         <div className='text-base lg:text-lg'>
             <strong>IBRAHIM BIN JIBREEN COMPANY</strong>, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
             ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
