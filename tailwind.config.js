@@ -1,5 +1,3 @@
-import { transform } from 'typescript';
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -19,9 +17,9 @@ export default {
         lato: 'Lato',
       },
       animation: {
-         "fade-in-left": "fadeInLeft 1.5s ease-in-out 1",
+         "fade-in-left": "fadeInLeft 1.5s ease",
          "fade-in-right": "fadeInRight 1.5s ease-in-out infinite",
-         "fade-in-top": "fadeInUp 1.5s ease-in-out 1",
+         "fade-in-top": "fadeInUp 2s ease",
          "fade-in-bottom": "fadeInDown 1.5s ease-in-out infinite"
       },
       keyframes: {
