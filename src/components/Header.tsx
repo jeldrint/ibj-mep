@@ -31,7 +31,7 @@ const Header = ({forwardedRef, inViewport}: InjectedViewportProps<HTMLDivElement
       <div key={key} id='header' className={`mb-5 flex flex-col`} ref={forwardedRef}>
 
          {/* Top Header */}
-         <div className={`${viewportAnimate && 'animate-fade-in-left'} flex bg-indigo-800 text-slate-300 items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-1 px-4 md:px-6 lg:px-10`}>
+         <div className={`${inViewport && 'animate-fade-in-left'} flex bg-indigo-800 text-slate-300 items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-1 px-4 md:px-6 lg:px-10`}>
             <span className="text-center block sm:hidden">Welcome to Ibrahim Bin Jibreen Contracting Co.</span>
             <span className="hidden sm:block">Welcome to Ibrahim Bin Jibreen Cont. Co.</span>
             <span className="hidden sm:flex duration-200 p-2 rounded-lg hover:bg-black gap-x-1 cursor-pointer">
@@ -40,7 +40,7 @@ const Header = ({forwardedRef, inViewport}: InjectedViewportProps<HTMLDivElement
             </span>
          </div>
 
-         <div className={`${viewportAnimate && 'animate-fade-in-top'} flex items-center justify-around py-3 px-4 md:px-6 lg:px-10`}>
+         <div className={`${inViewport && 'animate-fade-in-top'} flex items-center justify-around py-3 px-4 md:px-6 lg:px-10`}>
             {/* IBJ Logo */}
             <Link to='/' className="flex flex-col cursor-pointer font-serif text-center text-indigo-800" onClick={resetAnimation} >
                <span className="text-4xl md:text-[41px] lg:text-7xl min-w-24 cursor-pointer">I B J</span>
