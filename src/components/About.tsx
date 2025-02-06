@@ -3,8 +3,12 @@ import pic2 from '../images/2.jpg'
 import pic4 from '../images/4.jpeg'
 import pic5 from '../images/5.jpg'
 import useInViewport from '../useInViewport';
+import { useOutletContext } from 'react-router-dom';
+import { KeyProps } from '../types';
 
 const About = () : React.ReactElement => {
+   const {key, setKey} = useOutletContext<KeyProps>();
+
    const ref = useRef<HTMLDivElement | null>(null);
    const ref2 = useRef<HTMLDivElement | null>(null);
    const ref3 = useRef<HTMLDivElement | null>(null);
@@ -12,16 +16,11 @@ const About = () : React.ReactElement => {
    const isInViewport2 = useInViewport(ref2)
    const isInViewport3 = useInViewport(ref3)
 
-   console.log('First Ref: ', ref, isInViewport)
-   console.log('Second Ref: ', ref2, isInViewport2)
-   console.log('Third Ref: ', ref3, isInViewport3)
-
-
    return(
-      <div className="w-full h-full">
+      <div key={key} className="w-full h-full">
          {/* ABOUT Header  */}
-         <section ref={ref} className={`${isInViewport ? 'animate-fade-in-right' : 'bg-transparent text-transparent'} relative h-[50vh] bg-cover bg-top lg:bg-[0%_20%] xl:bg-center w-full bg-blue-800 bg-blend-hard-light`} style={{backgroundImage: `url(${pic2})`}}>
-            <div className={`${isInViewport && 'animate-fade-in-top'} absolute p-9 backdrop-blur-sm h-full w-full flex flex-col gap-y-2 items-center justify-center`}>
+         <section ref={ref} className={`${isInViewport ? 'animate-fade-in-right-lg' : ''} relative h-[50vh] bg-cover bg-top lg:bg-[0%_20%] xl:bg-center w-full bg-blue-800 bg-blend-hard-light`} style={{backgroundImage: `url(${pic2})`}}>
+            <div className={`${isInViewport ? 'animate-fade-in-top' : ''} absolute p-9 backdrop-blur-sm h-full w-full flex flex-col gap-y-2 items-center justify-center`}>
                <span className='text-4xl sm:text-6xl text-indigo-800 bg-slate-100 p-2 rounded-md'>ABOUT IBJ</span>
                <span className='text-base lg:text-lg text-black text-center max-w-[900px] bg-slate-100 p-1 rounded-md'>Our main goal is to exceed the client’s satisfaction by giving them the final accepted project at a 
                very reasonable price, including all supporting consultations and needed services.</span>
@@ -29,13 +28,13 @@ const About = () : React.ReactElement => {
          </section>
 
          {/* ABOUT Body  */}
-         <section className='mt-10 md:mt-20 px-[50px] md:px-[100px] lg:px-[150px] text-justify overflow-hidden'>
-            <header className={`${isInViewport2 ? 'animate-fade-in-right' : ''} inline-block mb-5 p-2 bg-slate-300 text-indigo-800 duration-15 text-4xl font-bold rounded-md`}>
+         <section className='mt-10 md:mt-20 lg:mt-[150px] px-[50px] md:px-[100px] lg:px-[150px] text-justify overflow-hidden'>
+            <header className={`${isInViewport ? 'animate-fade-in-right' : ''} inline-block mb-5 p-2 bg-slate-300 text-indigo-800 duration-15 text-4xl font-bold rounded-md`}>
                WHO WE ARE
             </header>
             <br />
             <img className={`${isInViewport2 ? 'animate-fade-in-top' : ''} float-left mr-5 h-[28vh] sm:h-[30vh] md:h-[40vh] lg:h-[50vh] rounded-md opacity-80`} src={pic4} alt='about-us-pic-1' />
-            <div className={`${isInViewport2 ? 'animate-fade-in-right' : ''} text-base lg:text-lg`}>
+            <div ref={ref2} className={`${isInViewport2 ? 'animate-fade-in-right' : ''} text-base lg:text-lg`}>
                In 2013, <strong>IBRAHIM BIN JIBREEN CONTRACTING COMPANY</strong> agreed with a joint venture and 
                sub-contractor of Al Esnad House Group and took control of the Electro-Mechanical work for KAFD 
                under the supervision of Saudi Bin Laden as the main contractor. And in 2014, Ibrahim Bin Jibreen 
@@ -44,7 +43,7 @@ const About = () : React.ReactElement => {
                institutionalized <strong>IBRAHIM BIN JIBREEN CONTRACTING COMPANY</strong>.
             </div>
             <br />
-            <div ref={ref2} className={`${isInViewport2 ? 'animate-fade-in-right' : ''} text-base lg:text-lg`}>
+            <div className={`${isInViewport2 ? 'animate-fade-in-right' : ''} text-base lg:text-lg`}>
                Widening the company’s construction network in the kingdom, additional manpower was 
                immediately mobilized to sustain the fast-growing project demand from the Government and 
                Private sector. i.e. The King Saud University, King Abdullah Financial District, National Guard, 

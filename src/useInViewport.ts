@@ -5,7 +5,7 @@ const useInViewport = (ref: MutableRefObject<HTMLDivElement | null>) => {
    const [isInViewport, setIsInViewport] = useState(false);
 
    useEffect(() => {
-      const observer = new IntersectionObserver(([entry]) => { setIsInViewport(entry.isIntersecting) }, { threshold: 0.1 });
+      const observer = new IntersectionObserver(([entry]) => { setIsInViewport(entry.isIntersecting) });
 
       if(ref.current){
          observer.observe(ref.current);

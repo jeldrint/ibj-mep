@@ -6,7 +6,6 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 const Router = () : React.ReactElement => {
-
    const router = createBrowserRouter([
       {
          path: '/',

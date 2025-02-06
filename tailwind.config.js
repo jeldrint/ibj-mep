@@ -16,11 +16,19 @@ export default {
         poppins: 'Poppins',
         lato: 'Lato',
       },
+      animationDuration: {
+         "1.5s": "1.5s",
+         "2s": "2s",
+      },
       animation: {
-         "fade-in-left": "fadeInLeft 1.5s ease-in-out",
-         "fade-in-right": "fadeInRight 1.5s ease-in-out",
-         "fade-in-top": "fadeInUp 1.5s ease-in-out",
-         "fade-in-bottom": "fadeInDown 1.5s ease-in-out"
+         "fade-in-left": "fadeInLeft 1s ease-in-out",
+         "fade-in-right": "fadeInRight 1s ease-in-out",
+         "fade-in-top": "fadeInUp 1s ease-in-out",
+         "fade-in-bottom": "fadeInDown 1s ease-in-out",
+         "fade-in-left-lg": "fadeInLeft 1.5s ease-in-out",
+         "fade-in-right-lg": "fadeInRight 1.5s ease-in-out",
+         "fade-in-top-lg": "fadeInUp 1.5s ease-in-out",
+         "fade-in-bottom-lg": "fadeInDown 1.5s ease-in-out"
       },
       keyframes: {
          fadeInLeft: {
@@ -42,6 +50,8 @@ export default {
       }
    },
   },
-  plugins: [],
+  plugins: [
+   require('tailwindcss-animate')
+  ],
 }
 
