@@ -7,13 +7,11 @@ const App = (): React.ReactElement => {
    const [key, setKey] = useState<string>('');
 
    return (
-      <div className="min-h-screen max-w-screen font-poppins bg-slate-100">
-      <div className="h-full w-full flex flex-col justify-between">
+      <div className="min-h-screen max-w-screen font-poppins bg-slate-100 flex flex-col justify-between overflow-hidden">
          <Header key={key} setKey={setKey} />
          <Outlet context={[key]} />
          <Footer />
-      </div>
-      </div>
+      </div> 
    )
 }
 

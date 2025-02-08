@@ -24,7 +24,7 @@ const Header = ({key, setKey}: KeyProps) : React.ReactElement => {
    return(
       <div key={key} id='header' className={`mb-5 md:mb-7 lg:mb-9 flex flex-col`} ref={ref}>
          {/* Top Header */}
-         <div className={`${isInViewport ? 'animate-in spin-in-6 duration-500' : ''} flex bg-indigo-800 text-slate-300 items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-1 px-4 md:px-6 lg:px-10`}>
+         <div className={`${isInViewport ? 'animate-in spin-in-6 duration-500' : 'invisible'} flex bg-indigo-800 text-slate-300 items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-1 px-4 md:px-6 lg:px-10`}>
             <span className="text-center block sm:hidden">Welcome to Ibrahim Bin Jibreen Contracting Co.</span>
             <span className="hidden sm:block">Welcome to Ibrahim Bin Jibreen Cont. Co.</span>
             <span className="hidden sm:flex duration-200 p-2 rounded-lg hover:bg-black gap-x-1 cursor-pointer">
@@ -33,7 +33,7 @@ const Header = ({key, setKey}: KeyProps) : React.ReactElement => {
             </span>
          </div>
 
-         <div className={`${isInViewport ? 'animate-in duration-1.5s fade-in-5 slide-in-from-bottom-20' : ''} flex items-center justify-around py-3 px-4 md:px-6 lg:px-10`}>
+         <div className={`${isInViewport ? 'animate-in duration-1.5s fade-in-5 slide-in-from-bottom-20' : 'invisible'} flex items-center justify-around py-3 px-4 md:px-6 lg:px-10`}>
             {/* IBJ Logo */}
             <Link to='/' className="flex flex-col cursor-pointer font-serif text-center text-indigo-800" onClick={resetAnimation} >
                <span className="text-4xl md:text-[41px] lg:text-7xl min-w-24 cursor-pointer">I B J</span>
