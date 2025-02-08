@@ -3,11 +3,7 @@ import pic2 from '../images/2.jpg'
 import pic4 from '../images/4.jpeg'
 import pic5 from '../images/5.jpg'
 import useInViewport from '../useInViewport';
-import { useOutletContext } from 'react-router-dom';
-import { KeyProps } from '../types';
-
 const About = () : React.ReactElement => {
-   const {key} = useOutletContext<KeyProps>();
    const ref1 = useRef<HTMLDivElement | null>(null);
    const isInViewport1 = useInViewport(ref1)
    const ref2 = useRef<HTMLDivElement | null>(null);
@@ -18,7 +14,7 @@ const About = () : React.ReactElement => {
    const isInViewport4 = useInViewport(ref4)
 
    return(
-      <div key={key} className="w-full h-full">
+      <div className="w-full h-full">
          {/* ABOUT Header  */}
          <section ref={ref1} className={`${isInViewport1 ? 'animate-in duration-1.5s fade-in-5 slide-in-from-bottom-20' : 'invisible'} relative h-[50vh] mb-10 md:mb-20 lg:mb-[150px] bg-cover bg-top lg:bg-[0%_20%] xl:bg-center w-full bg-blue-800 bg-blend-hard-light`} style={{backgroundImage: `url(${pic2})`}}>
             <div className={`${isInViewport1 ? 'animate-in duration-1.5s fade-in-5 slide-in-from-left-10' : 'invisible'} absolute p-9 backdrop-blur-sm h-full w-full flex flex-col gap-y-2 items-center justify-center`}>

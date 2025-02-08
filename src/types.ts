@@ -3,6 +3,6 @@ export type ForwardedRefProps= {
 }
 
 export type KeyProps = {
-   key: string,
-   setKey: React.Dispatch<React.SetStateAction<string>>
+   animationKey: string,
+   setAnimationKey: React.Dispatch<React.SetStateAction<string>>
 }

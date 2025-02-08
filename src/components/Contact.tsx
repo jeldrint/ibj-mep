@@ -3,9 +3,9 @@ import useInViewport from "../useInViewport";
 
 
 const Contact = () : React.ReactElement => {
-   const [key, setKey] = useState(0)
+   const [key, setAnimationKey] = useState(0)
    const resetAnimation = () => {
-      setKey(prevKey => prevKey + 1);
+      setAnimationKey(prevKey => prevKey + 1);
    }
 
    const ref= useRef<HTMLDivElement | null>(null);
