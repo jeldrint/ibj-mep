@@ -61,10 +61,9 @@ const About = () : React.ReactElement => {
                </div>
                <br /><br />
                <div className={`${isInViewport3 ? 'animate-in duration-1.5s fade-in-5 slide-in-from-left-10' : 'invisible'} text-base lg:text-lg`}>
-                  <strong>IBRAHIM BIN JIBREEN COMPANY</strong>, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <strong>IBRAHIM BIN-JIBREEN</strong>, now has 2 main divisions, which are as follows: <br />&emsp;1. Electro-mechanical Division, and <br />&emsp;2. Pre-engineered Division.
+                  <br /><br />
+                  These divisions work together or individually in various projects under close and proper supervision.
                </div>
             </div>
          </section>
