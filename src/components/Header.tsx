@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useInViewport from "../useInViewport";
 import arrowIcon from '../images/icon2-arrow.png';
 import { ToggleDropDownProps } from "../types";
+import DropDown from "./Dropdown";
 
 
 const Header = () : React.ReactElement => {
@@ -42,18 +43,11 @@ const Header = () : React.ReactElement => {
                <Link to='/' reloadDocument={true} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">HOME</Link>
                <div>
                   <Link to='/about-us' reloadDocument={true} onMouseOver={()=>setToggleDropdown({...toggleDropdown, about: true})} onMouseOut={()=>setToggleDropdown({...toggleDropdown, about: false})} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 flex items-center justify-end">ABOUT US&ensp;<img alt='arrow-down' width='20px' src={arrowIcon} /></Link>
-                  <ul className={`${!toggleDropdown.about ? 'invisible' : 'visible' } list-none absolute cursor-pointer text-left`}>
-                     <li>Lorem ipsum</li>
-                     <li>Odor amet</li>
-                     <li>Consectetuer adipiscing</li>
-                  </ul>
+                  <DropDown toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown} header='about' dropdownItems={['Lorem ipsum','Odor amet','Consectetuer']} />
                </div>
                <div>
                   <Link to='/services' reloadDocument={true} onMouseOver={()=>setToggleDropdown({...toggleDropdown, services: true})} onMouseOut={()=>setToggleDropdown({...toggleDropdown, services: false})} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 flex items-center justify-end">OUR SERVICES&ensp;<img alt='arrow-down' width='20px' src={arrowIcon} /></Link>
-                  <ul className={`${!toggleDropdown.services ? 'invisible' : 'visible' } list-none absolute cursor-pointer text-left`}>
-                     <li>Electro-mechanical Works</li>
-                     <li>Pre-engineered Works</li>
-                  </ul>
+                  <DropDown toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown} header='services' dropdownItems={['Electro-mechanical Works','Pre-engineered Works']} />
                </div>
                <Link to='/projects' reloadDocument={true} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">OUR PROJECTS</Link>
                <Link to='/contact-us' reloadDocument={true} className="rounded-md cursor-pointer border-2 p-2 duration-200 hover:border-indigo-700 hover:bg-slate-200 hover:opacity-80">CONTACT US</Link>
