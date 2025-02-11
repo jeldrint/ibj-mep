@@ -10,7 +10,7 @@ const WhoWeAre = () : React.ReactElement => {
    const isInViewport3: boolean = useInViewport(ref3)
 
    return(
-      <section className='px-[50px] md:px-[100px] lg:px-[150px] text-justify mb-[50px]'>
+      <section className='px-[50px] md:px-[100px] lg:px-[150px] text-justify'>
          <div ref={ref2} className='mb-[50px]'>
             <header className={`${isInViewport2 ? 'animate-in duration-1.5s fade-in-5 slide-in-from-right-10' : 'invisible'} inline-block mb-5 p-2 bg-slate-300 text-indigo-800 duration-15 text-4xl font-bold rounded-md`}>
                WHO WE ARE
@@ -51,8 +51,6 @@ const WhoWeAre = () : React.ReactElement => {
             </div>
          </div>
       </section>
-
-
    )
 }
 

@@ -1,10 +1,10 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import App from "./App";
-import About from "./components/About";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import WhoWeAre from "./components/sub-components/WhoWeAre";
+import About from "./components/About";
 
 const Router = () : React.ReactElement => {
    const router = createBrowserRouter([
@@ -12,8 +12,14 @@ const Router = () : React.ReactElement => {
          path: '/',
          element: <App />,
          children: [
-            { path: '/about-us', element: <About /> },
-            { path: '/about-us/who-we-are', element: <WhoWeAre /> },
+            { 
+               path: '/about-us',
+               element: <Outlet />,
+               children: [
+                  { index: true, element: <About /> },
+                  { path: '/about-us/who-we-are', element: <WhoWeAre /> },
+               ]
+            },
             { path: '/services', element: <Services /> },
             { path: '/projects', element: <Projects /> },
             { path: '/contact-us', element: <Contact /> },
