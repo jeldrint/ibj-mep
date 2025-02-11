@@ -43,7 +43,7 @@ const Header = () : React.ReactElement => {
                <Link to='/' reloadDocument={true} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">HOME</Link>
                <div>
                   <Link to='/about-us' reloadDocument={true} onMouseOver={()=>setToggleDropdown({...toggleDropdown, about: true})} onMouseOut={()=>setToggleDropdown({...toggleDropdown, about: false})} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 flex items-center justify-end">ABOUT US&ensp;<img alt='arrow-down' width='20px' src={arrowIcon} /></Link>
-                  <DropDown toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown} header='about' dropdownItems={['Lorem ipsum','Odor amet','Consectetuer']} />
+                  <DropDown toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown} header='about' dropdownItems={['WHO WE ARE','Odor amet','Consectetuer']} />
                </div>
                <div>
                   <Link to='/services' reloadDocument={true} onMouseOver={()=>setToggleDropdown({...toggleDropdown, services: true})} onMouseOut={()=>setToggleDropdown({...toggleDropdown, services: false})} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 flex items-center justify-end">OUR SERVICES&ensp;<img alt='arrow-down' width='20px' src={arrowIcon} /></Link>
