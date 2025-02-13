@@ -20,7 +20,7 @@ const Router = () : React.ReactElement => {
                   { path: '/about-us/who-we-are', element: <WhoWeAre /> },
                ]
             },
-            { path: '/services', element: <Services /> },
+            { path: '/our-services', element: <Services /> },
             { path: '/projects', element: <Projects /> },
             { path: '/contact-us', element: <Contact /> },
          ]

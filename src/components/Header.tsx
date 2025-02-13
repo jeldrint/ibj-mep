@@ -1,15 +1,11 @@
 import { useRef, useState } from "react";
 import icon1 from '../images/icon1.png'
-import { Link } from "react-router-dom";
 import useInViewport from "../useInViewport";
-import arrowIcon from '../images/icon2-arrow.png';
-import { ToggleDropDownProps } from "../types";
-import DropDown from "./Dropdown";
+import HeaderNav from "./sub-components/HeaderNav";
 
 
 const Header = () : React.ReactElement => {
    const [toggleMenu, setToggleMenu] = useState<boolean>(false);
-   const [toggleDropdown, setToggleDropdown] = useState<ToggleDropDownProps>({about: false, services: false});
 
    const barStyle = 'w-5 h-[3px] bg-black mt-1 transition-transform';
    const barStyle1 = 'w-5 h-[3px] bg-black mt-[6px] transition-transform rotate-[135deg] translate-y-[4px]';
@@ -40,17 +36,11 @@ const Header = () : React.ReactElement => {
 
             {/* Menu for large screens */}
             <div className="hidden sm:flex items-center list-none tracking-wide md:gap-x-3 lg:gap-x-6 text-[10px] sm:text-[12px] md:text-[15px] lg:text-[17px] text-center text-nowrap">
-               <Link to='/' reloadDocument={true} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">HOME</Link>
-               <div>
-                  <Link to='/about-us' reloadDocument={true} onMouseOver={()=>setToggleDropdown({...toggleDropdown, about: true})} onMouseOut={()=>setToggleDropdown({...toggleDropdown, about: false})} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 flex items-center justify-end">ABOUT US&ensp;<img alt='arrow-down' width='20px' src={arrowIcon} /></Link>
-                  <DropDown toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown} header='about' dropdownItems={['WHO WE ARE','Odor amet','Consectetuer']} />
-               </div>
-               <div>
-                  <Link to='/services' reloadDocument={true} onMouseOver={()=>setToggleDropdown({...toggleDropdown, services: true})} onMouseOut={()=>setToggleDropdown({...toggleDropdown, services: false})} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 flex items-center justify-end">OUR SERVICES&ensp;<img alt='arrow-down' width='20px' src={arrowIcon} /></Link>
-                  <DropDown toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown} header='services' dropdownItems={['Electro-mechanical Works','Pre-engineered Works']} />
-               </div>
-               <Link to='/projects' reloadDocument={true} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">OUR PROJECTS</Link>
-               <Link to='/contact-us' reloadDocument={true} className="rounded-md cursor-pointer border-2 p-2 duration-200 hover:border-indigo-700 hover:bg-slate-200 hover:opacity-80">CONTACT US</Link>
+               <HeaderNav navName='home' withDropdown={false} dropdownItems={[]} />
+               <HeaderNav navName='about-us' withDropdown={true} dropdownItems={['WHO WE ARE','Odor amet','Consectetuer']} />
+               <HeaderNav navName='our-services' withDropdown={true} dropdownItems={['Electro-mechanical Works','Pre-engineered Works']} />
+               <HeaderNav navName='projects' withDropdown={false} dropdownItems={[]} />
+               <HeaderNav navName='contact-us' withDropdown={false} dropdownItems={[]} />
             </div>
 
             {/* Menu for small screens */}
