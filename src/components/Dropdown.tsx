@@ -11,11 +11,11 @@ type DropdownProps = {
 const DropDown = ({toggleDropdown, setToggleDropdown, newNavName, dropdownItems}: DropdownProps) => {
 
       return(
-         <div onMouseEnter={()=>setToggleDropdown({...toggleDropdown, [newNavName]: true})} onMouseLeave={()=>setToggleDropdown({...toggleDropdown, [newNavName]: false})} className={`${!toggleDropdown[newNavName as keyof typeof toggleDropdown] ? 'invisible' : 'visible' } absolute z-10 flex flex-col cursor-pointer text-left bg-red-400`}>
+         <div onMouseEnter={()=>setToggleDropdown({...toggleDropdown, [newNavName]: true})} onMouseLeave={()=>setToggleDropdown({...toggleDropdown, [newNavName]: false})} className={`${!toggleDropdown[newNavName as keyof typeof toggleDropdown] ? 'invisible' : 'visible' } absolute z-10 p-3 rounded flex flex-col cursor-pointer text-left bg-slate-400 text-slate-50`}>
             {
                dropdownItems.map((item, idx)=>{
                   const path: string = item.replace(/\s+/g, '-').toLowerCase();
-                  return <Link to={`/about-us/${path}`} key={idx}>{item}</Link>
+                  return <Link to={`/about-us/${path}`} key={idx} className="transition-colors hover:text-indigo-800">{item}</Link>
                })
             }
          </div>

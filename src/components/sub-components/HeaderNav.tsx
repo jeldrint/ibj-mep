@@ -24,7 +24,7 @@ const HeaderNav = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : Rea
          <div className="relative">
             <div className="flex items-center rounded-sm border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 cursor-pointer" onMouseLeave={()=>setToggleDropdown({...toggleDropdown, [newNavName]: false})}>
                <Link to={`/${navName}`} reloadDocument={true}>{navName.replace(/-/g,' ').toUpperCase()}&ensp;</Link>
-               <img alt='arrow-down' width='20px' src={arrowIcon} onMouseEnter={()=>setToggleDropdown({...toggleDropdown, [newNavName]: true})} className="hover:animate-[spin_0.5s_ease-out]" />
+               <img alt='arrow-down' width='20px' src={arrowIcon} onMouseEnter={()=>setToggleDropdown({...toggleDropdown, [newNavName]: true})} className="hover:animate-[spin_0.5s_ease-in-out]" />
             </div>
             <DropDown toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown} newNavName={newNavName} dropdownItems={dropdownItems} />
          </div>

@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import WhoWeAre from "./components/sub-components/WhoWeAre";
 import About from "./components/About";
+import ErrorPage from "./components/ErrorPage";
 
 const Router = () : React.ReactElement => {
    
@@ -12,6 +13,7 @@ const Router = () : React.ReactElement => {
       {
          path: '/',
          element: <App />,
+         errorElement: <ErrorPage />,
          children: [
             { 
                path: '/about-us',
