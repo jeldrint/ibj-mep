@@ -15,7 +15,7 @@ const DropDown = ({toggleDropdown, setToggleDropdown, newNavName, dropdownItems}
             {
                dropdownItems.map((item, idx)=>{
                   const path: string = item.replace(/\s+/g, '-').toLowerCase();
-                  return <Link to={`/about-us/${path}`} key={idx} className="transition-colors hover:text-indigo-800">{item}</Link>
+                  return <Link to={`/about-us/${path}`} key={idx} reloadDocument={true} className="transition-colors hover:text-indigo-800">{item}</Link>
                })
             }
          </div>
