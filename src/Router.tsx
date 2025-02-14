@@ -7,6 +7,7 @@ import WhoWeAre from "./components/sub-components/WhoWeAre";
 import About from "./components/About";
 
 const Router = () : React.ReactElement => {
+   
    const router = createBrowserRouter([
       {
          path: '/',
