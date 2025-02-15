@@ -1,17 +1,11 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import icon1 from '../images/icon1.png'
 import useInViewport from "../useInViewport";
 import HeaderNav from "./sub-components/HeaderNav";
+import MenuButton from "./sub-components/MenuButton";
 
 
 const Header = () : React.ReactElement => {
-   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
-
-   const barStyle = 'w-5 h-[3px] bg-black mt-1 transition-transform';
-   const barStyle1 = 'w-5 h-[3px] bg-black mt-[6px] transition-transform rotate-[135deg] translate-y-[4px]';
-   const barStyle2 = 'transition-opacity opacity-0';
-   const barStyle3 = 'w-5 h-[3px] bg-black mt-[6px] transition-transform -rotate-[135deg] -translate-y-[5px]';
-
    const ref = useRef<HTMLDivElement | null>(null);
    const isInViewport = useInViewport(ref);
    
@@ -43,12 +37,8 @@ const Header = () : React.ReactElement => {
                <HeaderNav navName='contact-us' withDropdown={false} dropdownItems={[]} />
             </div>
 
-            {/* Menu for small screens */}
-            <div className="inline-block sm:hidden transition-transform cursor-pointer" onClick={()=>setToggleMenu(!toggleMenu)}>
-               <div className={toggleMenu ? barStyle1: barStyle}></div>
-               <div className={toggleMenu ? barStyle2: barStyle}></div>
-               <div className={toggleMenu ? barStyle3: barStyle}></div>
-            </div>
+            {/* Menu button to open Nav for small screens */}
+            <MenuButton />
          </div>   
       </div>
    )
