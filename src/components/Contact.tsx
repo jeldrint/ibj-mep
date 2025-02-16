@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import useInViewport from "../useInViewport";
 
-
 const Contact = () : React.ReactElement => {
    const [key, setAnimationKey] = useState(0)
    const resetAnimation = () => {

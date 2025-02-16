@@ -13,7 +13,7 @@ const MenuButton = (): React.ReactElement => {
    }
 
    return (
-      <div className="inline-block sm:hidden transition-transform cursor-pointer p-3 bg-indigo-500 rounded-3xl" onClick={()=>setToggleMenu(!toggleMenu)}>
+      <div className="z-20 inline-block sm:hidden transition-transform cursor-pointer p-3 bg-indigo-500 rounded-3xl" onClick={()=>setToggleMenu(!toggleMenu)}>
          <div className={toggleMenu ? barStyle1: barStyle}></div>
          <div className={toggleMenu ? barStyle2: barStyle}></div>
          <div className={toggleMenu ? barStyle3: barStyle}></div>
