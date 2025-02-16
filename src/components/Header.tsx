@@ -2,7 +2,6 @@ import { useRef } from "react";
 import icon1 from '../images/icon1.png'
 import useInViewport from "../useInViewport";
 import HeaderNav from "./sub-components/HeaderNav";
-import MenuButton from "./sub-components/MenuButton";
 
 
 const Header = () : React.ReactElement => {
@@ -36,9 +35,6 @@ const Header = () : React.ReactElement => {
                <HeaderNav navName='projects' withDropdown={false} dropdownItems={[]} />
                <HeaderNav navName='contact-us' withDropdown={false} dropdownItems={[]} />
             </div>
-
-            {/* Menu button to open Nav for small screens */}
-            <MenuButton />
          </div>   
       </div>
    )
