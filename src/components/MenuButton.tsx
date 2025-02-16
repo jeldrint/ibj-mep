@@ -1,4 +1,4 @@
-import { ToggleMenuProps } from "../../types";
+import { ToggleMenuProps } from "../types";
 
 const MenuButton = ({toggleMenu, setToggleMenu}: ToggleMenuProps): React.ReactElement => {
    

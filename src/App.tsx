@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/Nav";
 import Footer from "./components/Footer";
 import NavSmall from "./components/NavSmall";
 import { useState } from "react";
-import MenuButton from "./components/sub-components/MenuButton";
+import MenuButton from "./components/MenuButton";
 
 const App = (): React.ReactElement => {
    const [toggleMenu, setToggleMenu] = useState<boolean>(false);

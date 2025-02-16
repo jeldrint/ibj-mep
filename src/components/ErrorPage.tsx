@@ -1,7 +1,7 @@
 import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./Nav";
 import pic2 from '../images/2.jpg'
-import MenuButton from "./sub-components/MenuButton";
+import MenuButton from "./MenuButton";
 import NavSmall from "./NavSmall";
 import { useState } from "react";
 

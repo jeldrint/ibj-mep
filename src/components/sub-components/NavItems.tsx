@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import DropDown from "../Dropdown";
+import DropDown from "./Dropdown";
 import { useState } from "react";
 import arrowIcon from '../../images/icon2-arrow.png';
 import { HeaderNavProps, ToggleDropDownProps } from "../../types";
 
 
-const HeaderNav = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : React.ReactElement => {
+const NavItems = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : React.ReactElement => {
    const [toggleDropdown, setToggleDropdown] = useState<ToggleDropDownProps>({aboutus: false, ourservices: false});
    let newNavName = navName.replace('-','')
 
@@ -17,7 +17,7 @@ const HeaderNav = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : Rea
                <Link to={`/${navName}`} reloadDocument={true}>{navName.replace(/-/g,' ').toUpperCase()}&ensp;</Link>
                <img alt='arrow-down' src={arrowIcon} onMouseEnter={()=>setToggleDropdown({...toggleDropdown, [newNavName]: true})} className="w-4 lg:w-5 hover:animate-[spin_0.5s_ease-in-out]" />
             </div>
-            <DropDown toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown} newNavName={newNavName} dropdownItems={dropdownItems} />
+            <DropDown navName={navName} toggleDropdown={toggleDropdown} setToggleDropdown={setToggleDropdown} newNavName={newNavName} dropdownItems={dropdownItems} />
          </div>
 
       )
@@ -26,4 +26,4 @@ const HeaderNav = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : Rea
    }
 }
 
-export default HeaderNav;
+export default NavItems;
