@@ -13,7 +13,7 @@ const App = (): React.ReactElement => {
 
    return (
       <div className="min-h-screen max-w-screen font-poppins bg-slate-100 flex flex-col justify-between overflow-hidden">
-         <NavSmall />
+         {/* <NavSmall /> */}
          <Header />
          <Outlet />
          <Footer />
