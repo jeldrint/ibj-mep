@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import NavSmall from "./components/sub-components/NavSmall";
+// import NavSmall from "./components/sub-components/NavSmall";
 
 export type ToggleDropDownProps = {
    aboutus: boolean,
