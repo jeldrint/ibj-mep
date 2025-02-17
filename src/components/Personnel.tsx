@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import personnelpic1 from '../images/ibrahim.png'
+//import personnelpic1 from '../images/ibrahim.png'
 import personnelpic2 from '../images/emerson.png'
 import personnelpic3 from '../images/hani.png'
 import personnelpic4 from '../images/waleed.png'
@@ -18,7 +18,7 @@ const Personnel = () : React.ReactElement => {
          <header ref={ref} className={`${isInViewport ? 'animate-in duration-1.5s fade-in-5 slide-in-from-right-10' : 'invisible'} inline-block mb-5 p-2 text-slate-100 bg-indigo-800 duration-15 text-2xl md:text-4xl font-bold rounded-md`}>
             Key Personnel Profile
          </header>
-         <PersonnelProfile name='Mr. Ibrahim Bin Jibreen' title='CEO and President' img={personnelpic1} desc1={personnel1desc1} desc2={personnel1desc2} />
+         <PersonnelProfile name='Mr. Ibrahim Bin Jibreen' title='CEO and President' img={personnelpic2} desc1={personnel1desc1} desc2={personnel1desc2} />
          <PersonnelProfile name='Mr. Emerson Tolentino' title='Project Director' img={personnelpic2} desc1={personnel2desc1} desc2={personnel2desc2} />
          <PersonnelProfile name='Mr. Hani  Abd- Elraouf ' title='Finance Manager' img={personnelpic3} desc1={personnel3desc1} />
          <PersonnelProfile name='Mr.  Waleed Al-Sayed Ali Ibrahim' title='Human Resource Manager' img={personnelpic4} desc1={personnel4desc1} />
