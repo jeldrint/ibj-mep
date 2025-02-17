@@ -17,7 +17,7 @@ export type ToggleDropDownProps = {
 export type PersonnelProps = {
    name: string,
    title: string,
-   img: string,
+   img: any,
    desc1: string,
    desc2?: string
 }
