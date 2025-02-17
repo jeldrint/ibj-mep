@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import personnelpic1 from '../images/ibrahim.png'
+import personnelpic1 from '../images/Ibrahim.png'
 import personnelpic2 from '../images/emerson.png'
 import personnelpic3 from '../images/hani.png'
 import personnelpic4 from '../images/waleed.png'
