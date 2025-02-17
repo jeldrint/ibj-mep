@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Header from "./components/Nav";
+import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import NavSmall from "./components/NavSmall";
 import { useState } from "react";
@@ -12,7 +12,7 @@ const App = (): React.ReactElement => {
       <div className="min-h-screen max-w-screen font-poppins bg-slate-100 flex flex-col justify-between overflow-hidden">
          <MenuButton toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
          <NavSmall toggleMenu={toggleMenu} /> 
-         <Header />
+         <Nav />
          <Outlet />
          <Footer />
       </div> 

@@ -7,13 +7,14 @@ import { HeaderNavProps, ToggleDropDownProps } from "../../types";
 
 const NavItems = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : React.ReactElement => {
    const [toggleDropdown, setToggleDropdown] = useState<ToggleDropDownProps>({aboutus: false, ourservices: false});
-   let newNavName = navName.replace('-','')
+   let newNavName: string = navName.replace('-','')
+   let navSmallScreens: string = "text-sm flex items-start rounded-sm cursor-pointer border-2 p-2 border-transparent";
+   let navBigScreens: string = "flex items-center rounded-sm border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 cursor-pointer";
 
    if(withDropdown){
-      //console.log(toggleDropdown)
       return(
          <div className="relative">
-            <div onMouseLeave={()=>setToggleDropdown({...toggleDropdown, [newNavName]: false})} className="flex items-center rounded-sm border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 cursor-pointer" >
+            <div onMouseLeave={()=>setToggleDropdown({...toggleDropdown, [newNavName]: false})} className={`${screen.width >= 640 ? navBigScreens : navSmallScreens }`} >
                <Link to={`/${navName}`} reloadDocument={true}>{navName.replace(/-/g,' ').toUpperCase()}&ensp;</Link>
                <img alt='arrow-down' src={arrowIcon} onMouseEnter={()=>setToggleDropdown({...toggleDropdown, [newNavName]: true})} className="w-4 lg:w-5 hover:animate-[spin_0.5s_ease-in-out]" />
             </div>
@@ -22,7 +23,7 @@ const NavItems = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : Reac
 
       )
    }else{
-      return <Link to='/' reloadDocument={true} className="rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80">{navName.replace(/-/g,' ').toUpperCase()}</Link>
+      return <Link to='/' reloadDocument={true} className={`rounded-sm cursor-pointer border-2 p-2 border-transparent ${screen.width >= 640 ? 'duration-200 hover:border-b-indigo-700 hover:opacity-80' : 'text-sm' }`} >{navName.replace(/-/g,' ').toUpperCase()}</Link>
    }
 }
 

@@ -1,5 +1,5 @@
 import Footer from "./Footer";
-import Header from "./Nav";
+import Nav from "./Nav";
 import pic2 from '../images/2.jpg'
 import MenuButton from "./MenuButton";
 import NavSmall from "./NavSmall";
@@ -12,7 +12,7 @@ const ErrorPage = (): React.ReactElement => {
       <div className="min-h-screen max-w-screen font-poppins bg-slate-100 flex flex-col justify-between overflow-hidden">
          <MenuButton toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
          <NavSmall toggleMenu={toggleMenu} /> 
-         <Header />
+         <Nav />
          <div className="w-full h-full">
             <section className={`relative h-[50vh] mb-10 md:mb-20 lg:mb-[150px] bg-cover bg-top lg:bg-[0%_20%] xl:bg-center w-full bg-blue-800 bg-blend-hard-light`} style={{backgroundImage: `url(${pic2})`}}>
                <div className={`absolute p-9 backdrop-blur-sm h-full w-full flex flex-col gap-y-2 items-center justify-center`}>
