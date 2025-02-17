@@ -9,7 +9,7 @@ const App = (): React.ReactElement => {
    const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
    return (
-      <div className="min-h-screen max-w-screen font-poppins bg-slate-100 flex flex-col justify-between overflow-hidden">
+      <div className="min-h-screen max-w-screen font-poppins bg-slate-200 flex flex-col justify-between overflow-hidden">
          <MenuButton toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
          <NavSmall toggleMenu={toggleMenu} /> 
          <Nav />

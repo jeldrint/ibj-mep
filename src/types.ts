@@ -13,3 +13,11 @@ export type ToggleDropDownProps = {
    aboutus: boolean,
    ourservices: boolean
 }
+
+export type PersonnelProps = {
+   name: string,
+   title: string,
+   img: string,
+   desc1: string,
+   desc2?: string
+}

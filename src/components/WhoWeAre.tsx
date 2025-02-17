@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import pic4 from '../../images/4.jpeg'
-import pic5 from '../../images/5.jpg'
-import useInViewport from '../../useInViewport';
+import pic4 from '../images/4.jpeg'
+import pic5 from '../images/5.jpg'
+import useInViewport from '../useInViewport';
 
 const WhoWeAre = () : React.ReactElement => {
    const ref2:React.MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null);
@@ -10,9 +10,9 @@ const WhoWeAre = () : React.ReactElement => {
    const isInViewport3: boolean = useInViewport(ref3)
 
    return(
-      <section className='px-[50px] md:px-[100px] lg:px-[150px] text-justify'>
+      <section className='p-[50px] md:p-[100px] lg:p-[150px] text-justify'>
          <div ref={ref2} className='mb-[50px]'>
-            <header className={`${isInViewport2 ? 'animate-in duration-1.5s fade-in-5 slide-in-from-right-10' : 'invisible'} inline-block mb-5 p-2 bg-slate-300 text-indigo-800 duration-15 text-4xl font-bold rounded-md`}>
+            <header className={`${isInViewport2 ? 'animate-in duration-1.5s fade-in-5 slide-in-from-right-10' : 'invisible'} inline-block mb-5 p-2 bg-slate-300 text-indigo-800 duration-15 text-2xl md:text-4xl font-bold rounded-md`}>
                WHO WE ARE
             </header>
             <br />
@@ -35,7 +35,7 @@ const WhoWeAre = () : React.ReactElement => {
                our clients.
             </div>
          </div>
-         <div ref={ref3}>
+         <div ref={ref3} className='mb-[50px]'>
             <img className={`${isInViewport3 ? 'animate-in duration-1.5s fade-in-5 slide-in-from-bottom-20' : 'invisible'} float-right ml-5 h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-[50vh] rounded-md opacity-80`} src={pic5} alt='about-us-pic-1' />
             <div className={`${isInViewport3 ? 'animate-in duration-1.5s fade-in-5 slide-in-from-left-10' : 'invisible'} text-base lg:text-lg`}>
                <strong>IBRAHIM BIN JIBREEN COMPANY</strong>, as we are today has completed numerous Projects in just 
