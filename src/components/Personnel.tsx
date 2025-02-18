@@ -4,9 +4,11 @@ import personnelpic2 from '../images/emerson.png'
 import personnelpic3 from '../images/hani.png'
 import personnelpic4 from '../images/waleed.png'
 import personnelpic5 from '../images/abdelhadi.png'
+// import personnelpic6 from '../images/sisay1.png'
+import personnelpic6 from '../images/sisay2.jpeg'
 import useInViewport from '../useInViewport';
 import PersonnelProfile from './sub-components/PersonnelProfile';
-import { personnel1desc1, personnel1desc2, personnel2desc1, personnel2desc2, personnel3desc1, personnel4desc1, personnel5desc1 } from '../paragraphs';
+import { personnel1desc1, personnel1desc2, personnel2desc1, personnel2desc2, personnel3desc1, personnel4desc1, personnel5desc1, personnel6desc1 } from '../texts';
 
 
 const Personnel = () : React.ReactElement => {
@@ -20,9 +22,10 @@ const Personnel = () : React.ReactElement => {
          </header>
          <PersonnelProfile name='Mr. Ibrahim Bin Jibreen' title='CEO and President' img={personnelpic1} desc1={personnel1desc1} desc2={personnel1desc2} />
          <PersonnelProfile name='Mr. Emerson Tolentino' title='Project Director' img={personnelpic2} desc1={personnel2desc1} desc2={personnel2desc2} />
-         <PersonnelProfile name='Mr. Hani  Abd- Elraouf ' title='Finance Manager' img={personnelpic3} desc1={personnel3desc1} />
+         <PersonnelProfile name='Mr. Hani Abd- Elraouf ' title='Finance Manager' img={personnelpic3} desc1={personnel3desc1} />
          <PersonnelProfile name='Mr.  Waleed Al-Sayed Ali Ibrahim' title='Human Resource Manager' img={personnelpic4} desc1={personnel4desc1} />
          <PersonnelProfile name='Mr. Abdelhadi Mohamed Hassan' title='Procurement Manager' img={personnelpic5} desc1={personnel5desc1} />
+         <PersonnelProfile name='Mr. Sisay G. Teshale' title='Site Coordinator' img={personnelpic6} desc1={personnel6desc1} />
       </section>
    )
 }
