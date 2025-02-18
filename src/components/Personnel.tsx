@@ -25,7 +25,7 @@ const Personnel = () : React.ReactElement => {
          <PersonnelProfile name='Mr. Hani Abd- Elraouf ' title='Finance Manager' img={personnelpic3} desc1={personnel3desc1} />
          <PersonnelProfile name='Mr.  Waleed Al-Sayed Ali Ibrahim' title='Human Resource Manager' img={personnelpic4} desc1={personnel4desc1} />
          <PersonnelProfile name='Mr. Abdelhadi Mohamed Hassan' title='Procurement Manager' img={personnelpic5} desc1={personnel5desc1} />
-         <PersonnelProfile name='Mr. Sisay G. Teshale' title='Site Coordinator' img={personnelpic6} desc1={personnel6desc1} />
+         <PersonnelProfile name='Mr. Sisay G. Teshale' title='Project Coordinator' img={personnelpic6} desc1={personnel6desc1} />
       </section>
    )
 }
