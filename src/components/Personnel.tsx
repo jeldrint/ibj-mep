@@ -4,8 +4,8 @@ import personnelpic2 from '../images/emerson.png'
 import personnelpic3 from '../images/hani.png'
 import personnelpic4 from '../images/waleed.png'
 import personnelpic5 from '../images/abdelhadi.png'
-// import personnelpic6 from '../images/sisay1.png'
-import personnelpic6 from '../images/sisay2.jpeg'
+import personnelpic6 from '../images/sisay1.png'
+// import personnelpic6 from '../images/sisay2.jpeg'
 import useInViewport from '../useInViewport';
 import PersonnelProfile from './sub-components/PersonnelProfile';
 import { personnel1desc1, personnel1desc2, personnel2desc1, personnel2desc2, personnel3desc1, personnel4desc1, personnel5desc1, personnel6desc1 } from '../texts';
