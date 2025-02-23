@@ -10,7 +10,7 @@ const NavItemsSmall = ({navName, withDropdown, dropdownItems}: HeaderNavProps) :
    let newNavName: string = navName.replace('-','')
 
    const handleClick = () => {
-      if(toggleDropdown[newNavName]){
+      if(toggleDropdown[newNavName as keyof typeof toggleDropdown]){
          setToggleDropdown({...toggleDropdown, [newNavName]: false})
       }else{
          setToggleDropdown({...toggleDropdown, [newNavName]: true})
