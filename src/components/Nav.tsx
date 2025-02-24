@@ -28,9 +28,9 @@ const Nav = () : React.ReactElement => {
             </a>
 
             {/* Menu for large screens */}
-            <div className="hidden sm:flex items-center list-none tracking-wide md:gap-x-3 lg:gap-x-6 text-[10px] sm:text-[12px] md:text-[15px] lg:text-[17px] text-center text-nowrap">
+            <div className="hidden sm:flex items-center tracking-wide md:gap-x-3 lg:gap-x-6 text-[10px] sm:text-[12px] md:text-[15px] lg:text-[17px] text-center text-nowrap">
                <NavItems navName='home' withDropdown={false} dropdownItems={[]} />
-               <NavItems navName='about-us' withDropdown={true} dropdownItems={['WHO WE ARE','Key Personnel Profile','Consectetuer']} />
+               <NavItems navName='about-us' withDropdown={true} dropdownItems={['WHO WE ARE','Key Personnel Profile','Manpower Status']} />
                <NavItems navName='our-services' withDropdown={true} dropdownItems={['Electro-mechanical Works','Pre-engineered Works']} />
                <NavItems navName='projects' withDropdown={false} dropdownItems={[]} />
                <NavItems navName='contact-us' withDropdown={false} dropdownItems={[]} />

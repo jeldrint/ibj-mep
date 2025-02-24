@@ -3,6 +3,7 @@ import pic2 from '../images/2.jpg'
 import useInViewport from '../useInViewport';
 import WhoWeAre from './WhoWeAre';
 import Personnel from './Personnel';
+import Manpower from './Manpower';
 
 const About = () : React.ReactElement => {
    const ref1:React.MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null);
@@ -24,6 +25,7 @@ const About = () : React.ReactElement => {
          {/* ABOUT Body  */}
          <WhoWeAre />
          <Personnel />
+         <Manpower />
          
          {/* ABOUT Footer  */}
          <section id='about-footer' ref={ref4} className={`${isInViewport4 ? 'animate-in duration-1.5s fade-in-5 slide-in-from-bottom-20' : 'invisible'} relative h-[40vh] bg-cover bg-bottom lg:bg-[0%_85%] w-full bg-blue-800 bg-blend-hard-light`} style={{backgroundImage: `url(${pic2})`}}>
