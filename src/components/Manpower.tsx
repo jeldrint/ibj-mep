@@ -15,26 +15,26 @@ const Manpower = () : React.ReactElement => {
             </header>
             <br />
             {/* TWO COLUMNS: */}
-            <div className='flex flex-col gap-y-5 items-center md:flex-row md:justify-evenly'>
+            <div className='flex flex-col gap-y-5 items-center md:flex-row md:gap-x-5 md:justify-evenly'>
                {/* IMAGES */}
                <div>
-                  <img className={`${isInViewport ? 'animate-in duration-1.5s fade-in-5 slide-in-from-top-20' : 'invisible'} my-2 md:mx-2 h-[28vh] sm:h-[30vh] md:h-[40vh] lg:h-[50vh] rounded-md opacity-100`} src={pic} alt='manpower-pic-1' />
-                  <img className={`${isInViewport ? 'animate-in duration-1.5s fade-in-5 slide-in-from-top-20' : 'invisible'} my-2 md:mx-2 h-[28vh] sm:h-[30vh] md:h-[40vh] lg:h-[50vh] rounded-md opacity-100`} src={pic2} alt='manpower-pic-2' />
+                  <img className={`${isInViewport ? 'animate-in duration-1.5s fade-in-5 slide-in-from-top-20' : 'invisible'} my-2 md:mx-2 max-h-[28vh] sm:max-h-[30vh] md:max-h-[50vh] lg:max-h-[60vh] rounded-md`} src={pic} alt='manpower-pic-1' />
+                  <img className={`${isInViewport ? 'animate-in duration-1.5s fade-in-5 slide-in-from-top-20' : 'invisible'} my-2 md:mx-2 max-h-[28vh] sm:max-h-[30vh] md:max-h-[50vh] lg:max-h-[60vh] rounded-md`} src={pic2} alt='manpower-pic-2' />
                </div>
 
                {/* TEXT */}
-               <div>
-                  <div className={`text-base lg:text-lg mb-10`}>
+               <div className='text-sm md:text-base lg:text-xl'>
+                  <div className='mb-10'>
                      <p className='font-bold'>Electrical/Mechanical Department</p>
                      <ul>
+                        <li>Supervisor -1</li>
                         <li>Engineer -2</li>
-                        <li>Engineer -1</li>
                         <li>Foreman -2</li>
                         <li>Technicians -20</li>
                         <li>Skilled Laborers -25</li>
                      </ul>
                   </div>
-                  <div className={`text-base lg:text-lg mb-10`}>
+                  <div className='mb-10'>
                      <p className='font-bold'>Firefighting</p>
                      <ul>
                         <li>Supervisor -1</li>
@@ -43,7 +43,7 @@ const Manpower = () : React.ReactElement => {
                         <li>Skilled Laborers -20</li>
                      </ul>
                   </div>
-                  <div className={`text-base lg:text-lg mb-10`}>
+                  <div className='mb-10'>
                      <p className='font-bold'>HVAC - Ducting</p>
                      <ul>
                         <li>Supervisor -2</li>
@@ -53,14 +53,14 @@ const Manpower = () : React.ReactElement => {
                         <li>Insulator -5</li>                  
                      </ul>
                   </div>
-                  <div className={`text-base lg:text-lg mb-10`}>
+                  <div className='mb-10'>
                      <p className='font-bold'>HVAC - Chilled Water</p>
                      <ul>
                         <li>Skilled Technicians -5</li>
                         <li>Fabricator -5</li>
                      </ul>
                   </div>
-                  <div className={`text-base lg:text-lg mb-10`}>
+                  <div className='mb-10'>
                      <p className='font-bold'>Plumbing</p>
                      <ul>
                         <li>Foreman -1</li>
@@ -68,7 +68,7 @@ const Manpower = () : React.ReactElement => {
                         <li>Skilled Laborers -33</li>
                      </ul>
                   </div>
-                  <div className={`text-base lg:text-xl mb-10`}>
+                  <div className='mb-10'>
                      <p className='font-bold'>Total Number of Manpower: 193</p>
                   </div>
                </div>
