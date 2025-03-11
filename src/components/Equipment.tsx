@@ -18,17 +18,17 @@ const Equipment = () : React.ReactElement => {
                {/* TEXT */}
                <div className='self-start text-sm md:text-base lg:text-xl'>
                   <ul className='leading-loose'>
-                     <li>1. Forklift (2.0 tons) - 2 units</li>
-                     <li>2. Pressing Machines - 6 units</li>
-                     <li>3. Plainer Machines - 6 units</li>
-                     <li>4. Sanding Machines - 3 units</li>
-                     <li>5. Complete set of Saw and Boring Machines - 5 units</li>
-                     <li>6. Electrical Drill Machines - 1 unit per technician</li>
-                     <li>7. Dyna Trucks (2500 kg. capacity) - 1 unit</li>
-                     <li>8. Dyna Trucks (3000 kg. capacity) - 1 unit</li>
-                     <li>9. Pick-up services - 5 units</li>
-                     <li>10. Service Buses (30 seaters) - 2 units</li>
-                     <li>11. Service Buses (15 seaters) - 5 units</li>
+                     <li>Forklift (2.0 tons) - 2 units</li>
+                     <li>Pressing Machines - 6 units</li>
+                     <li>Plainer Machines - 6 units</li>
+                     <li>Sanding Machines - 3 units</li>
+                     <li>Complete set of Saw and Boring Machines - 5 units</li>
+                     <li>Electrical Drill Machines - 1 unit per technician</li>
+                     <li>Dyna Trucks (2500 kg. capacity) - 1 unit</li>
+                     <li>Dyna Trucks (3000 kg. capacity) - 1 unit</li>
+                     <li>Pick-up services - 5 units</li>
+                     <li>Service Buses (30 seaters) - 2 units</li>
+                     <li>Service Buses (15 seaters) - 5 units</li>
                   </ul>
                </div>
                {/* IMAGES */}
