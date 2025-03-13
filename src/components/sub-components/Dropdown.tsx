@@ -27,7 +27,7 @@ const DropDown = ({navName, toggleDropdown, setToggleDropdown, newNavName, dropd
    // ** Dropdown for the smaller screens
    }else{
       return(
-         <div className={`${!toggleDropdown[newNavName as keyof typeof toggleDropdown] ? 'hidden' : 'flex animate-in fade-in-5 slide-in-from-top-7' } flex-col duration-1000 px-2 rounded cursor-pointer text-right text-sm bg-transparent text-slate-50`}>
+         <div className={`${!toggleDropdown[newNavName as keyof typeof toggleDropdown] ? 'hidden' : 'flex animate-in fade-in-5 slide-in-from-top-7' } flex-col duration-1000 pr-7 rounded cursor-pointer text-right text-xs bg-transparent text-slate-50`}>
             {
                dropdownItems.map((item, idx)=>{
                   const path: string = item.replace(/\s+/g, '-').toLowerCase();
