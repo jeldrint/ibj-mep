@@ -16,7 +16,7 @@ const HomePage = () : React.ReactElement => {
             <span className='text-lg sm:text-2xl lg:text-3xl text-indigo-800 bg-slate-100 p-1 rounded-md'>Providing quality, reliable, excellent, safe and efficient construction service since 2002.</span>
             <div className='flex gap-x-5'>
                <Link to='/about-us' className='text-sm md:text-base bg-indigo-800 rounded text-slate-200 p-2 hover:duration-1000 hover:bg-slate-400 hover:text-slate-900 hover:animate-in hover:slide-in-from-left-2'>{String.fromCharCode(8594)} MORE ABOUT US</Link>
-               <Link to='/our-services' className='text-sm md:text-base bg-indigo-800 rounded text-slate-200 p-2 hover:duration-1000 hover:bg-slate-400 hover:text-slate-900 hover:animate-in hover:slide-in-from-left-2'>{String.fromCharCode(8594)} OUR SERVICES</Link>
+               <Link to='/our-servicess' className='text-sm md:text-base bg-indigo-800 rounded text-slate-200 p-2 hover:duration-1000 hover:bg-slate-400 hover:text-slate-900 hover:animate-in hover:slide-in-from-left-2'>{String.fromCharCode(8594)} OUR SERVICES</Link>
             </div>
          </div>
       </section>
