@@ -21,7 +21,7 @@ const NavItems = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : Reac
 
       )
    }else{
-      return <Link to='/' reloadDocument={true} className={`rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80`} >{navName.replace(/-/g,' ').toUpperCase()}</Link>
+      return <Link to={`/${navName}`} reloadDocument={true} className={`rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80`} >{navName.replace(/-/g,' ').toUpperCase()}</Link>
    }
 }
 

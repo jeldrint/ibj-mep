@@ -9,6 +9,7 @@ import ErrorPage from "./components/ErrorPage";
 import Personnel from "./components/Personnel";
 import Manpower from "./components/Manpower";
 import Equipment from "./components/Equipment";
+import HomePage from "./components/HomePage";
 
 const Router = () : React.ReactElement => {
    
@@ -18,6 +19,8 @@ const Router = () : React.ReactElement => {
          element: <App />,
          errorElement: <ErrorPage />,
          children: [
+            { index: true, element: <HomePage /> },
+            { path: '/home', element: <HomePage /> },
             { 
                path: '/about-us',
                element: <Outlet />,
@@ -30,8 +33,8 @@ const Router = () : React.ReactElement => {
                ]
             },
             { path: '/our-services', element: <Services /> },
-            { path: '/projects', element: <Projects /> },
-            { path: '/contact-us', element: <Contact /> },
+            { path: '/projectss', element: <Projects /> },
+            { path: '/contact-uss', element: <Contact /> },
          ]
       }
    ])

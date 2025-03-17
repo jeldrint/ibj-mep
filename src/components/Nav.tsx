@@ -8,7 +8,7 @@ const Nav = () : React.ReactElement => {
    const isInViewport = useInViewport(ref);
    
    return(
-      <div ref={ref} className={`mb-5 md:mb-7 lg:mb-9 flex flex-col`} >
+      <div ref={ref} className={`flex flex-col`} >
          {/* Top Nav */}
          <div className={`${isInViewport ? 'animate-in spin-in-6 duration-500' : 'invisible'} flex bg-indigo-800 text-slate-300 items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-1 px-4 md:px-6 lg:px-10`}>
             <span className="text-center block sm:hidden">Welcome to Ibrahim Bin Jibreen Contracting Co.</span>
