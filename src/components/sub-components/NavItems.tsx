@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import DropDown from "./Dropdown";
+import DropDown from "./NavDropdown";
 import { useState } from "react";
 import arrowIcon from '../../images/icon2-arrow.png';
 import { HeaderNavProps, ToggleDropDownProps } from "../../types";

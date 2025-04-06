@@ -11,3 +11,7 @@ export const personnel4desc1: string = "Waleed has 10 years plus experience as a
 export const personnel5desc1: string = "Abdelhadi has 12 years of experience in the procurement. He manages the purchasing of products and services for a company.  He creates a buying strategy that takes into account the company budget and necessary supplies and then they find matching vendors. Their day includes meetings with superiors, like the Chief Financial Officer (CFO) or the Chief Operating Officer (COO). Generally, supervisors task Procurement Managers with finding suppliers that meet demands at the right price."
 
 export const personnel6desc1: string = "Sisay, 38 years of age, has 12 years of experience in the kingdom of Saudi Arabia and currently serves as a Project Coordinator. He has professional experience in human resource management and is currently responsible for overseeing a team of employees who help plan and carry out events, organize negotiation and communication for clients and company."
+
+export const homeInfoCard1: [string, string] = ['OUR SERVICES','Offering Mechanical, Electrical, and Plumbing Services']
+export const homeInfoCard2: [string, string] = ['OUR PROJECTS',"List of Projects we've accomplished so far"]
+export const homeInfoCard3: [string, string] = ['CONTACT US','Keep in touch with us']

@@ -20,6 +20,7 @@ const Router = () : React.ReactElement => {
          errorElement: <ErrorPage />,
          children: [
             { index: true, element: <HomePage /> },
+            
             { path: '/home', element: <HomePage /> },
             { 
                path: '/about-us',

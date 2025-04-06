@@ -9,7 +9,7 @@ type DropdownProps = {
    dropdownItems: string [],
 }
 
-const DropDown = ({navName, toggleDropdown, setToggleDropdown, newNavName, dropdownItems}: DropdownProps) => {
+const NavDropDown = ({navName, toggleDropdown, setToggleDropdown, newNavName, dropdownItems}: DropdownProps) => {
 
    if(screen.width > 640){
       return(
@@ -39,4 +39,4 @@ const DropDown = ({navName, toggleDropdown, setToggleDropdown, newNavName, dropd
    }
 }
 
-export default DropDown;
+export default NavDropDown;
