@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import icon1 from '../images/icon1.png'
+import ibjLogo from '../images/ibjLogo.png'
 import useInViewport from "../useInViewport";
 import NavItems from "./sub-components/NavItems";
 
@@ -10,7 +11,7 @@ const Nav = () : React.ReactElement => {
    return(
       <div ref={ref} className={`flex flex-col`} >
          {/* Top Nav */}
-         <div className={`${isInViewport ? 'animate-in spin-in-6 duration-500' : 'invisible'} flex bg-indigo-800 text-slate-300 items-center justify-center sm:justify-between text-[12px] sm:text-sm md:text-base py-1 px-4 md:px-6 lg:px-10`}>
+         <div className={`${isInViewport ? 'animate-in duration-1.5s spin-in-6 duration-500' : 'invisible'} flex items-center justify-center sm:justify-between bg-indigo-800 text-slate-300 text-[12px] sm:text-sm md:text-base py-1 px-4 md:px-6 lg:px-10`}>
             <span className="text-center block sm:hidden">Welcome to Ibrahim Bin Jibreen Contracting Co.</span>
             <span className="hidden sm:block">Welcome to Ibrahim Bin Jibreen Cont. Co.</span>
             <span className="hidden sm:flex duration-200 p-2 rounded-lg hover:bg-black gap-x-1 cursor-pointer">
@@ -22,8 +23,7 @@ const Nav = () : React.ReactElement => {
          <div className={`${isInViewport ? 'animate-in duration-1.5s delay-500 fade-in-5 slide-in-from-bottom-20' : 'invisible'} flex items-center justify-around py-3 px-4 md:px-6 lg:px-10`}>
             {/* IBJ Logo */}
             <a href='/' className="flex flex-col cursor-pointer font-serif text-center text-indigo-800">
-               <span className="text-4xl md:text-[41px] lg:text-7xl min-w-24 cursor-pointer">I B J</span>
-               <span className="lg:text-[20px]">شركة إبراهيم بن جبرين للمقاولات</span>
+               <img alt='IBJ logo' src={ibjLogo} width={'300px'} className=""/>
             </a>
 
             {/* Menu for large screens */}
@@ -34,7 +34,7 @@ const Nav = () : React.ReactElement => {
                <NavItems navName='projects' withDropdown={false} dropdownItems={[]} />
                <NavItems navName='contact-us' withDropdown={false} dropdownItems={[]} />
             </div>
-         </div>   
+         </div>
       </div>
    )
 
