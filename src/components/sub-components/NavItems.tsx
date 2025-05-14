@@ -12,7 +12,7 @@ const NavItems = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : Reac
    if(withDropdown){
       return(
          <div className="relative">
-            <div onMouseLeave={()=>setToggleDropdown({...toggleDropdown, [newNavName]: false})} className='flex items-center rounded-sm border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80 cursor-pointer' >
+            <div onMouseLeave={()=>setToggleDropdown({...toggleDropdown, [newNavName]: false})} className='flex items-center rounded-sm border-2 p-2 border-transparent hover:border-b-indigo-700 hover:opacity-80 cursor-pointer' >
                <Link to={`/${navName}`} reloadDocument={true}>{navName.replace(/-/g,' ').toUpperCase()}&ensp;</Link>
                <img alt='arrow-down' src={arrowIcon} onMouseEnter={()=>setToggleDropdown({...toggleDropdown, [newNavName]: true})} className="w-4 lg:w-5 hover:animate-[spin_0.5s_ease-in-out]" />
             </div>
@@ -21,7 +21,7 @@ const NavItems = ({navName, withDropdown, dropdownItems}: HeaderNavProps) : Reac
 
       )
    }else{
-      return <Link to={`/${navName}`} reloadDocument={true} className={`rounded-sm cursor-pointer border-2 p-2 border-transparent duration-200 hover:border-b-indigo-700 hover:opacity-80`} >{navName.replace(/-/g,' ').toUpperCase()}</Link>
+      return <Link to={`/${navName}`} reloadDocument={true} className={`rounded-sm border-2 p-2 border-transparent hover:border-b-indigo-700 hover:opacity-80 cursor-pointer`} >{navName.replace(/-/g,' ').toUpperCase()}</Link>
    }
 }
 

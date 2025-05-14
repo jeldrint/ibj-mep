@@ -20,14 +20,15 @@ const Nav = () : React.ReactElement => {
             </span>
          </div>
 
-         <div className={`${isInViewport ? 'animate-in duration-1.5s delay-500 fade-in-5 slide-in-from-bottom-20' : 'invisible'} flex items-center justify-around py-3 px-4 md:px-6 lg:px-10`}>
+
+         <div className={`${isInViewport ? 'animate-in duration-1.5s delay-500 slide-in-from-bottom-20' : 'invisible'} flex items-center justify-around py-1 px-4 md:px-6 lg:px-10`}>
             {/* IBJ Logo */}
             <a href='/' className="flex flex-col cursor-pointer font-serif text-center text-indigo-800">
-               <img alt='IBJ logo' src={ibjLogo} width={'300px'} className=""/>
+               <img alt='IBJ logo' src={ibjLogo} width={'220px'} />
             </a>
 
             {/* Menu for large screens */}
-            <div className="hidden sm:flex items-center tracking-wide md:gap-x-3 lg:gap-x-6 text-[10px] sm:text-[12px] md:text-[15px] lg:text-[17px] text-center text-nowrap">
+            <div className="hidden sm:flex items-center tracking-wide md:gap-x-3 lg:gap-x-6 text-center text-nowrap">
                <NavItems navName='home' withDropdown={false} dropdownItems={[]} />
                <NavItems navName='about-us' withDropdown={true} dropdownItems={['Who we are','Key Personnel Profile','Manpower Status', 'Company Equipment List']} />
                <NavItems navName='our-services' withDropdown={true} dropdownItems={['Electro-mechanical Works','Pre-engineered Works']} />
@@ -37,7 +38,6 @@ const Nav = () : React.ReactElement => {
          </div>
       </div>
    )
-
 }
 
 export default Nav;
