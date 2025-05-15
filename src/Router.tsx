@@ -2,7 +2,6 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 import WhoWeAre from "./components/WhoWeAre";
 import About from "./components/About";
 import ErrorPage from "./components/ErrorPage";
@@ -10,6 +9,7 @@ import Personnel from "./components/Personnel";
 import Manpower from "./components/Manpower";
 import Equipment from "./components/Equipment";
 import HomePage from "./components/HomePage";
+import Contact from "./components/Contact";
 
 const Router = () : React.ReactElement => {
    

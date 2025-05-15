@@ -2,6 +2,7 @@ export type HeaderNavProps = {
    navName: string;
    withDropdown: boolean;
    dropdownItems: string [];
+   displayToSmallNav?: boolean;
 }
 
 export type ToggleMenuProps = {
@@ -21,3 +22,8 @@ export type PersonnelProps = {
    desc1: string,
    desc2?: string
 }
+
+export type DisplayPDFProps = {
+   displayPdf?: boolean,
+   setDisplayPdf: React.Dispatch<React.SetStateAction<boolean>>
+};
