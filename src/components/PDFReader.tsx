@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { pdfjs, Document, Page } from "react-pdf";
-import pdfFile from '../Company-Profile-Rev-2.pdf';
+import pdfFile from '../Company Profile Rev. 03.pdf';
 import arrow from '../images/icon2-arrow.png'
 import xMark from '../images/icons8-x-30.png'
 import { DisplayPDFProps } from "../types";
